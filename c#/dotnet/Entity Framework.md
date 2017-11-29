@@ -11,6 +11,18 @@
 ## Good Practice
 Separate data layer from web project. Makes it useable elsewhere.
 
+## Models
+
+### Creating a model
+```csharp
+//Example of multiple models. With data annotations
+```
+### Data Annotations
+```csharp
+//Place to hold different data annotations and what they do
+```
+><bold>IMPORTANT:</bold> Foreign Key relationships will be set to delete on cascade when a migration is processed. Make sure that is the option you want.
+
 ## Migrations
 - Create, seed, and apply schema changes
 - Now supports multiple DbContexts in a project (EF 6)
@@ -44,3 +56,9 @@ update-database -TargetMigration <MigrationName>
 #Removes all database changes. Essentially a clean database.
 update-database -TargeMigration 0 
 ```
+
+
+
+### Fluent API
+TODO
+- Discuss
