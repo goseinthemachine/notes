@@ -34,3 +34,13 @@ If using multiple dbContexts make sure to user -ConfingurationTypeName
 
 ### Committing Changes to the Database
 <code>update-database -ConfigurationTypeName Books.Web.DataContexts.IdentityMigrations.Configuration</code>
+
+### Reversing Migrations
+It is possible to reverse a migration with the following commands
+```powershell
+#Removes all database changes up to this migration
+update-database -TargetMigration <MigrationName> 
+
+#Removes all database changes. Essentially a clean database.
+update-database -TargeMigration 0 
+```
