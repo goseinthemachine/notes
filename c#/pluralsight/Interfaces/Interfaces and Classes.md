@@ -86,3 +86,6 @@ public class PeopleRepository
 }
 ```
 
+> Program to an abstraction
+
+
