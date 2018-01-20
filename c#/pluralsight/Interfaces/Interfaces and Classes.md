@@ -88,4 +88,36 @@ public class PeopleRepository
 
 > Program to an abstraction
 
+## Creating Interfaces to Add Extensibility
+### The Repository Pattern
+Pattern for connecting to various data sources
+- Databases
+- Files
+- Cloud storage 
+- ...
 
+> Repository Pattern - Mediates between the domain and data mapping layers usig a collection-like interface for accessing domain objects. -Fowler, et al. Patterns of Enterprise Application Architechture. Addison-Wesley, 2003
+
+Repository Patter is a lay to separate our application from the data storage technology
+- Application - interacts only with the repository layer
+- Repository - interacts with the data storage layer
+- Data Storage
+
+As long a repository implements a Repository's interface it become pluggable into the application. 
+For an example with a interface you can implement a database, REST, csv file as valid data stores as long as the implement the same interface.
+
+Simple Repository - CRUD
+
+Example:
+
+```csharp
+public interface IPersonRepository
+{
+    void AddPerson(Person newPerson); //Creates
+    IEnumerable<Person> GetPeople(); //Reads
+    Person GetPerson(string lastName); //reads
+    void UpdatePerson(string lastName, Person updatedPerson); //Updates
+    void UpdatePeople(IEnumerable<Person> updatedPeople); //Updates
+    void DeletePerson(string lastName); //Deletes
+}
+```
