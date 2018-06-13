@@ -54,7 +54,7 @@ It is possible to reverse a migration with the following commands
 update-database -TargetMigration <MigrationName> 
 
 #Removes all database changes. Essentially a clean database.
-update-database -TargeMigration 0 
+update-database -TargetMigration 0 
 ```
 
 
